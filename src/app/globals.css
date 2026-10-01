@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3f5f4;
+  --color-ink: #15201c;
+  --color-tache: #1e5b4f;
+  --color-tache-soft: #dcebe5;
+  --color-motivation: #34408c;
+  --color-motivation-soft: #e1e4f4;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Accueil : hauteur exacte de l'écran. 100vh sert de repli pour les
+   navigateurs qui ne connaissent pas encore l'unité dvh. */
+.home-screen {
+  height: 100vh;
+  height: 100dvh;
+}
